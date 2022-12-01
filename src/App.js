@@ -32,7 +32,9 @@ function App() {
             return pokemon.id.includes(id);
           })
           .filter((pokemon) => {
-            return pokemon.name.english.includes(name);
+            return pokemon.name.english
+              .toLowerCase()
+              .includes(name.toLowerCase());
           })
           .map((pokemon) => {
             return (
